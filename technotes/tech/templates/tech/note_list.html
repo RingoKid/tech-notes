@@ -13,7 +13,7 @@
         <div class="card-body">
           <h2 class="card-title">{{ note.title }} </h2>
           <p class="card-text">{{ note.content|truncatechars:90 }}</p>
-          <a href="#" class="btn btn-primary">Read More &rarr;</a>
+          <a href="/technotes/{{ note.id }}" class="btn btn-primary">Read More &rarr;</a>
         </div>
         <div class="card-footer text-muted">
           Posted on {{ note.created }}

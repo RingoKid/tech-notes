@@ -1,11 +1,11 @@
 {
-    "title": "Blog Home",
-    "name": "startbootstrap-blog-home",
+    "title": "Blog Post",
+    "name": "startbootstrap-blog-post",
     "version": "4.2.3",
     "scripts": {
         "start": "node_modules/.bin/gulp watch"
     },
-    "description": "A basic blog homepage HTML template built with Bootstrap",
+    "description": "A basic blog post HTML template built with Bootstrap",
     "keywords": [
         "css",
         "sass",
@@ -14,9 +14,9 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/template/blog-home",
+    "homepage": "https://startbootstrap.com/template/blog-post",
     "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-blog-home/issues",
+        "url": "https://github.com/StartBootstrap/startbootstrap-blog-post/issues",
         "email": "feedback@startbootstrap.com"
     },
     "license": "MIT",
@@ -26,7 +26,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-blog-home.git"
+        "url": "https://github.com/StartBootstrap/startbootstrap-blog-post.git"
     },
     "dependencies": {
         "bootstrap": "4.5.3",

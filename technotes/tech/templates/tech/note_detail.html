@@ -1,3 +1,31 @@
+{% include 'base.html' %}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-8">
+            <h1 class="mt-4">{{ object.title }}</h1>
+
+            <p class="lead">
+                by
+                {{ object.owner }}
+            </p>
+
+            <hr>
+
+            <p>Posted on {{ object.created }}</p>
+
+            <hr>
+
+            <p class="lead">{{ object.content }}</p>
+
+
+        </div>
+    </div>
+
+</div>
+
+<!-- 
 <h1>{{ object.title }}</h1> 
 <p>{{ object.created }}</p>
-<h3>{{ object.content }}</h3>
+<h3>{{ object.content }}</h3> -->

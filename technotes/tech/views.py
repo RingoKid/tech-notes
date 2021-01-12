@@ -10,7 +10,8 @@ def add_note(request):
             form_data = form.save(commit=False)
             form_data.owner = request.user
             form_data.save()
-            print(request.user)
+
+            return redirect('note_list')
     else:
         form = AddNoteForm()
 
