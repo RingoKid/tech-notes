@@ -19,7 +19,12 @@
 
             <p class="lead">{{ object.content }}</p>
 
-
+            <a href="/technotes/{{ object.id }}/delete" class="btn btn-danger">Delete</a>
+            <!-- <button type="button" class="btn btn-danger">Delete</button> -->
+            <!-- <form method="post">
+                {% csrf_token %} 
+                <input type="submit" class="btn btn-danger" value="Delete"> 
+            </form>  -->
         </div>
     </div>
 
