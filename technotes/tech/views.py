@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import AddNoteForm
-from django.views.generic import ListView, DetailView, DeleteView
+from django.views.generic import ListView, DetailView, DeleteView, UpdateView
 from .models import Note
 
 def add_note(request):
@@ -27,5 +27,15 @@ class NoteDetail(DetailView):
 
 class NoteDelete(DeleteView):
     model = Note
+
+    success_url ="/technotes/list/"
+
+class NoteUpdate(UpdateView):
+    model = Note
+
+    fields = [ 
+        "title", 
+        "content"
+    ]
 
     success_url ="/technotes/list/"

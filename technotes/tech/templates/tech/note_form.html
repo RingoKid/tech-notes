@@ -1,0 +1,25 @@
+{% include 'base.html' %}
+
+<div class="container">
+    <div class="row">
+        <div class="card col-md-8 my-4">
+            <h5 class="card-header">Add Note:</h5>
+            <div class="card-body">
+                <form id="add_note" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label class="form-label" for="id_title">Title:</label>
+                        <input class="form-control" type="text" name="title" maxlength="50" required id="id_title"
+                            value="{{object.title}}">
+                        <!-- <input type="text" aria-label="First name" class="form-control"> -->
+                        <label class="form-label" for="id_content">Content:</label>
+                        <textarea class="form-control" name="content" cols="40" rows="10" required id="id_content">
+                            {{object.content}}
+                        </textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
