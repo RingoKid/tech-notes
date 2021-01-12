@@ -1,10 +1,29 @@
-<h1>Hello</h1>
+{% include 'base.html' %}
 
-<form id="register" method="post">
-    
-    {% csrf_token %}
-    {{form.as_p}}
-    <button class=" mr-auto btn btn-primary btn-block py-2 rounded-1" type="submit">
-        Sign Up
-    </button>
-</form>
+<div class="container">
+    <div class="row">
+        <div class="card col-md-5 mx-auto my-4">
+            <div class="card-body">
+                <form id="register" method="post">
+
+                    {% csrf_token %}
+                    <!-- {{form.as_p}} -->
+                    <label class="form-label" for="id_first_name">First name</label>
+                    <input class="form-control" type="text" name="first_name" maxlength="20" required id="id_first_name">
+                    <label class="form-label" for="id_last_name">Last name</label>
+                    <input class="form-control" type="text" name="last_name" maxlength="20" required id="id_last_name">
+                    <label class="form-label" for="id_email">Email</label>
+                    <input class="form-control" type="email" name="email" autofocus required id="id_email">
+                    <label class="form-label" for="id_password1">Enter Password</label>
+                    <input class="form-control" type="password" name="password1" required id="id_password1">
+                    <label class="form-label" for="id_password2">Re-type Password</label>
+                    <input class="form-control" type="password" name="password2" maxlength="28" required id="id_password2">
+                    <button class=" mr-auto btn btn-primary btn-block py-2 rounded-1 mt-4" type="submit">
+                        Sign Up
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

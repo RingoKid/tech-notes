@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect
 from .forms import AddNoteForm
 from django.views.generic import ListView, DetailView, DeleteView, UpdateView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 from .models import Note
 
+@login_required()
 def add_note(request):
     if request.method == 'POST':
         form = AddNoteForm(request.POST)
@@ -17,12 +20,14 @@ def add_note(request):
 
     return render(request, 'add_note.html', {'form':form})
 
-class NoteList(ListView):
+class NoteList(LoginRequiredMixin, ListView):
+    login_url = '/accounts/login/'
     context_object_name = 'notes'
     def get_queryset(self):
         return Note.objects.filter(owner=self.request.user)
 
-class NoteDetail(DetailView):
+class NoteDetail(LoginRequiredMixin, DetailView):
+    login_url = '/accounts/login/'
     model = Note
 
 class NoteDelete(DeleteView):

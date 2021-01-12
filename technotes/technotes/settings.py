@@ -35,6 +35,9 @@ ALLOWED_HOSTS = [
 # Application definition
 AUTH_USER_MODEL = 'note.User'
 
+LOGIN_REDIRECT_URL = '/technotes/list/'
+LOGOUT_REDIRECT_URL = '/accounts/login/'
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
